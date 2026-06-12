@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Simon Pro — Memory Game" />
+    <meta
+      property="og:description"
+      content="A browser-based memory game built with Vanilla JS, Web Audio API & Canvas."
+    />
+    <title>Simon Pro — Memory Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bg"></canvas>
+
+    <div id="ui">
+      <div id="logo">memory game</div>
+      <div id="brand">Simon Pro</div>
+      <div id="tagline">test your pattern memory</div>
+
+      <div id="stats-row">
+        <div class="stat-card">
+          <div class="stat-label">Level</div>
+          <div class="stat-num" id="s-level">—</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Score</div>
+          <div class="stat-num" id="s-score">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Best</div>
+          <div class="stat-num" id="s-best">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Streak</div>
+          <div class="stat-num" id="s-streak">0</div>
+        </div>
+      </div>
+
+      <div id="diff-row">
+        <button class="diff-btn active" data-speed="900">Easy</button>
+        <button class="diff-btn" data-speed="600">Medium</button>
+        <button class="diff-btn" data-speed="350">Hard</button>
+        <button class="diff-btn" data-speed="200">Insane</button>
+      </div>
+
+      <div id="board-wrap">
+        <button class="pad" id="pad-r" aria-label="red" disabled></button>
+        <button class="pad" id="pad-g" aria-label="green" disabled></button>
+        <button class="pad" id="pad-b" aria-label="blue" disabled></button>
+        <button class="pad" id="pad-y" aria-label="yellow" disabled></button>
+        <div id="center-ring">
+          <div id="center-level">—</div>
+          <div id="center-sub">level</div>
+        </div>
+        <div id="pulse"></div>
+      </div>
+
+      <div id="seq-track"></div>
+      <div id="msg">choose difficulty · press start</div>
+      <div id="combo-badge"></div>
+      <button id="start-btn">Start Game</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
